@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		AF9B63BB2BC6D92F001209BA /* MessagingFBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63BA2BC6D92F001209BA /* MessagingFBApp.swift */; };
-		AF9B63BD2BC6D92F001209BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63BC2BC6D92F001209BA /* ContentView.swift */; };
 		AF9B63BF2BC6D931001209BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9B63BE2BC6D931001209BA /* Assets.xcassets */; };
 		AF9B63C22BC6D931001209BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9B63C12BC6D931001209BA /* Preview Assets.xcassets */; };
 		AF9B63C92BC6DB03001209BA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63C82BC6DB03001209BA /* LoginView.swift */; };
 		AF9B63CC2BC6DC8C001209BA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AF9B63CB2BC6DC8C001209BA /* FirebaseAuth */; };
 		AF9B63CE2BC6DC8C001209BA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF9B63CD2BC6DC8C001209BA /* FirebaseFirestore */; };
 		AF9B63D02BC6DC8C001209BA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF9B63CF2BC6DC8C001209BA /* FirebaseStorage */; };
+		AF9B63D22BC6EB7D001209BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF9B63B72BC6D92F001209BA /* MessagingFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessagingFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9B63BA2BC6D92F001209BA /* MessagingFBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingFBApp.swift; sourceTree = "<group>"; };
-		AF9B63BC2BC6D92F001209BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF9B63BE2BC6D931001209BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF9B63C12BC6D931001209BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9B63C82BC6DB03001209BA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				AF9B63BA2BC6D92F001209BA /* MessagingFBApp.swift */,
-				AF9B63BC2BC6D92F001209BA /* ContentView.swift */,
 				AF9B63C82BC6DB03001209BA /* LoginView.swift */,
 				AF9B63BE2BC6D931001209BA /* Assets.xcassets */,
+				AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */,
 				AF9B63C02BC6D931001209BA /* Preview Content */,
 			);
 			path = MessagingFB;
@@ -143,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9B63C22BC6D931001209BA /* Preview Assets.xcassets in Resources */,
+				AF9B63D22BC6EB7D001209BA /* GoogleService-Info.plist in Resources */,
 				AF9B63BF2BC6D931001209BA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,7 +156,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9B63C92BC6DB03001209BA /* LoginView.swift in Sources */,
-				AF9B63BD2BC6D92F001209BA /* ContentView.swift in Sources */,
 				AF9B63BB2BC6D92F001209BA /* MessagingFBApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
