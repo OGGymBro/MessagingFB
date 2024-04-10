@@ -17,6 +17,8 @@
 		AF9B63D22BC6EB7D001209BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */; };
 		AF9B63D42BC6EFE2001209BA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63D32BC6EFE2001209BA /* ImagePicker.swift */; };
 		AF9B63D62BC6F6B5001209BA /* MainMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63D52BC6F6B5001209BA /* MainMessagesView.swift */; };
+		AF9B63D92BC6F908001209BA /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63D82BC6F908001209BA /* FirebaseManager.swift */; };
+		AF9B63DC2BC6FDE9001209BA /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF9B63DB2BC6FDE9001209BA /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AF9B63D32BC6EFE2001209BA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		AF9B63D52BC6F6B5001209BA /* MainMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesView.swift; sourceTree = "<group>"; };
+		AF9B63D82BC6F908001209BA /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9B63DC2BC6FDE9001209BA /* SDWebImageSwiftUI in Frameworks */,
 				AF9B63CC2BC6DC8C001209BA /* FirebaseAuth in Frameworks */,
 				AF9B63CE2BC6DC8C001209BA /* FirebaseFirestore in Frameworks */,
 				AF9B63D02BC6DC8C001209BA /* FirebaseStorage in Frameworks */,
@@ -47,6 +51,7 @@
 		AF9B63AE2BC6D92F001209BA = {
 			isa = PBXGroup;
 			children = (
+				AF9B63D72BC6F8F7001209BA /* Utils */,
 				AF9B63B92BC6D92F001209BA /* MessagingFB */,
 				AF9B63B82BC6D92F001209BA /* Products */,
 			);
@@ -82,6 +87,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AF9B63D72BC6F8F7001209BA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AF9B63D82BC6F908001209BA /* FirebaseManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +115,7 @@
 				AF9B63CB2BC6DC8C001209BA /* FirebaseAuth */,
 				AF9B63CD2BC6DC8C001209BA /* FirebaseFirestore */,
 				AF9B63CF2BC6DC8C001209BA /* FirebaseStorage */,
+				AF9B63DB2BC6FDE9001209BA /* SDWebImageSwiftUI */,
 			);
 			productName = MessagingFB;
 			productReference = AF9B63B72BC6D92F001209BA /* MessagingFB.app */;
@@ -133,6 +147,7 @@
 			mainGroup = AF9B63AE2BC6D92F001209BA;
 			packageReferences = (
 				AF9B63CA2BC6DC8C001209BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AF9B63DA2BC6FDE9001209BA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = AF9B63B82BC6D92F001209BA /* Products */;
 			projectDirPath = "";
@@ -163,6 +178,7 @@
 			files = (
 				AF9B63D42BC6EFE2001209BA /* ImagePicker.swift in Sources */,
 				AF9B63D62BC6F6B5001209BA /* MainMessagesView.swift in Sources */,
+				AF9B63D92BC6F908001209BA /* FirebaseManager.swift in Sources */,
 				AF9B63C92BC6DB03001209BA /* LoginView.swift in Sources */,
 				AF9B63BB2BC6D92F001209BA /* MessagingFBApp.swift in Sources */,
 			);
@@ -380,6 +396,14 @@
 				minimumVersion = 10.24.0;
 			};
 		};
+		AF9B63DA2BC6FDE9001209BA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -397,6 +421,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AF9B63CA2BC6DC8C001209BA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		AF9B63DB2BC6FDE9001209BA /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF9B63DA2BC6FDE9001209BA /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
