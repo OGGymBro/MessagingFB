@@ -15,6 +15,7 @@
 		AF9B63CE2BC6DC8C001209BA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AF9B63CD2BC6DC8C001209BA /* FirebaseFirestore */; };
 		AF9B63D02BC6DC8C001209BA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF9B63CF2BC6DC8C001209BA /* FirebaseStorage */; };
 		AF9B63D22BC6EB7D001209BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */; };
+		AF9B63D42BC6EFE2001209BA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B63D32BC6EFE2001209BA /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AF9B63C12BC6D931001209BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF9B63C82BC6DB03001209BA /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AF9B63D32BC6EFE2001209BA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				AF9B63BE2BC6D931001209BA /* Assets.xcassets */,
 				AF9B63D12BC6EB7D001209BA /* GoogleService-Info.plist */,
 				AF9B63C02BC6D931001209BA /* Preview Content */,
+				AF9B63D32BC6EFE2001209BA /* ImagePicker.swift */,
 			);
 			path = MessagingFB;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9B63D42BC6EFE2001209BA /* ImagePicker.swift in Sources */,
 				AF9B63C92BC6DB03001209BA /* LoginView.swift in Sources */,
 				AF9B63BB2BC6D92F001209BA /* MessagingFBApp.swift in Sources */,
 			);
