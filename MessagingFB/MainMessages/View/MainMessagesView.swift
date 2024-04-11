@@ -9,65 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 
-class MainMessagesViewModel: ObservableObject {
-    
-    @Published var errorMessage = ""
-    @Published var chatUser: ChatUser?
-    
-    init() {
-        
-        DispatchQueue.main.async {
-            self.isUserCurrentlyLoggedOut = FirebaseManager.shared.auth.currentUser?.uid == nil
-        }
-        
-        fetchCurrentUser()
-    }
-    
-     func fetchCurrentUser() {
-        
-        guard let uid = FirebaseManager.shared.auth.currentUser?.uid else {
-            self.errorMessage = "Could not find firebase uid"
-            return
-        }
-        
-        
-        FirebaseManager.shared.firestore
-            .collection("users")
-            .document(uid)
-            .getDocument { snapshot, error in
-                
-            if let error = error {
-                self.errorMessage = "Failed to fetch current user: \(error)"
-                print("Failed to fetch current user:", error)
-                return
-            }
-            
-//            self.errorMessage = "123"
-            
-            guard let data = snapshot?.data() else {
-                self.errorMessage = "No data found"
-                return
-                
-            }
-//            self.errorMessage = "Data: \(data.description)"
-          
-                self.chatUser = ChatUser(data: data)
-                
-                //            self.errorMessage = chatUser.profileImageUrl
-                
-            }
-    }
-    
-    @Published var isUserCurrentlyLoggedOut = false
-    
-    func hanleSignOut() {
-        isUserCurrentlyLoggedOut.toggle()
-        try? FirebaseManager.shared.auth.signOut()
-        //try? FirebaseManager().auth.signOut()  new instance
-        
-    }
-    
-}
+
 
 struct MainMessagesView: View {
     
@@ -187,10 +129,11 @@ struct MainMessagesView: View {
         }
     }
         
+    @State var shouldShowNewMessageScreen = false
     
     private var newMessageButton: some View {
         Button {
-            
+            shouldShowNewMessageScreen.toggle()
         } label: {
             HStack {
                 Spacer()
@@ -204,6 +147,9 @@ struct MainMessagesView: View {
                 .cornerRadius(32)
                 .padding(.horizontal)
                 .shadow(radius: 15)
+        }
+        .fullScreenCover(isPresented: $shouldShowNewMessageScreen){
+            CreateNewMessageView()
         }
     }
 }
