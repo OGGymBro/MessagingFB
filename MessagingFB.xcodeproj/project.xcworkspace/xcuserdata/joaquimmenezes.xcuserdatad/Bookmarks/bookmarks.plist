@@ -34,7 +34,7 @@
 			<key>text-context</key>
 			<dict>
 				<key>focused</key>
-				<string>            //self.persistRecentMessage()
+				<string>            self.persistRecentMessage()
 </string>
 				<key>leading</key>
 				<string>            print("Successfully saved current user sending message")
