@@ -65,6 +65,7 @@ class ChatLogViewModel: ObservableObject {
     }
     
     func handleSend() {
+        print("inside function handleSend()")
         print(chatText)
         guard let fromId = FirebaseManager.shared.auth.currentUser?.uid else { return }
         

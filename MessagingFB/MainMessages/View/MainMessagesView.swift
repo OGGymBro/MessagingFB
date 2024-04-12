@@ -15,7 +15,27 @@ struct MainMessagesView: View {
     
     @State var shouldShowLogOutOptions = false
     
+    @State var shouldNavigateToChatLogView = false
+    
     private var chatLogViewModel = ChatLogViewModel(chatUser: nil)
+    
+    var body: some View {
+        NavigationView {
+            
+            VStack {
+                customNavBar
+                messagesView
+                
+                NavigationLink("",isActive: $shouldNavigateToChatLogView){
+                    ChatLogView(vm: chatLogViewModel)
+                }
+
+            }
+            .overlay(
+                newMessageButton, alignment: .bottom)
+            .navigationBarHidden(true)
+        }
+    }
     
     private var customNavBar: some View {
         HStack(spacing: 16) {
@@ -80,24 +100,6 @@ struct MainMessagesView: View {
                 self.vm.isUserCurrentlyLoggedOut = false
                 self.vm.fetchCurrentUser()
             })
-        }
-    }
-    @State var shouldNavigateToChatLogView = false
-    
-    var body: some View {
-        NavigationView {
-            
-            VStack {
-                customNavBar
-                messagesView
-                
-                NavigationLink("",isActive: $shouldNavigateToChatLogView){
-                    ChatLogView(vm: chatLogViewModel)
-                }
-            }
-            .overlay(
-                newMessageButton, alignment: .bottom)
-            .navigationBarHidden(true)
         }
     }
     
@@ -167,6 +169,8 @@ struct MainMessagesView: View {
                 print(user.email)
                 self.shouldNavigateToChatLogView.toggle()
                 self.ChatUser = user
+                self.chatLogViewModel.chatUser = user
+                self.chatLogViewModel.fetchMessages()
             })
         }
     }
