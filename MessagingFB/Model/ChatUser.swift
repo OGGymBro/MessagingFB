@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ChatUser : Identifiable{
+struct ChatUser : Identifiable,Codable{
     
     var id: String {uid}
     
